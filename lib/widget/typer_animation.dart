@@ -22,14 +22,15 @@ class _TyperAnimationState extends State<TyperAnimation> {
         width: 250.0,
         child: AnimatedTextKit(
           animatedTexts: [
-            TyperAnimatedText(
+            TypewriterAnimatedText(
               text,
               textStyle: const TextStyle(
                 fontSize: 32.0,
                 fontWeight: FontWeight.bold,
               ),
-              speed: const Duration(milliseconds: 100),
+              speed: const Duration(milliseconds: 200),
               curve: Curves.linearToEaseOut,
+              cursor: '|'//cursor是string
             ),
           ],
           repeatForever: true,
