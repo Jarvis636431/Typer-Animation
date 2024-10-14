@@ -24,8 +24,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Column(
         children: [
-          TyperAnimation(),//使用animated text暂时无法解决光标的问题,cursor好像被删掉了
-          TypeWriterText()//使用自定义的type writer会频繁setstate刷新浪费资源
+          CustomTyperAnimation(text:'abcde'),
         ],
       ),
     );
