@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'widget/animation/typer_animation.dart';
-
+import 'widget/typer_animation.dart';
+import 'widget/type_writer.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -22,7 +22,12 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
         centerTitle: true,
       ),
-      body: const TyperAnimation(),
+      body: Column(
+        children: [
+          TyperAnimation(),//使用animated text暂时无法解决光标的问题,cursor好像被删掉了
+          TypeWriterText()//使用自定义的type writer会频繁setstate刷新浪费资源
+        ],
+      ),
     );
   }
 }
