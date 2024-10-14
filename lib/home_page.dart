@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'widget/animation/typer_animation.dart';
 
+
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
@@ -19,14 +20,9 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
+        centerTitle: true,
       ),
-      body: Center(
-        child: Column(
-          children:[
-            Row()
-          ],
-        ),
-      ),
+      body: const TyperAnimation(),
     );
   }
 }
