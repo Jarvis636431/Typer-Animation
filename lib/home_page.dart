@@ -23,7 +23,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Column(
         children: [
-          CustomTyperAnimation(text:'abcde'),
+          CustomTyperAnimation(text:'Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!'),
         ],
       ),
     );
